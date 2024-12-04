@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="/static/css/master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="/static/js/jquery-3.7.1.min.js"></script>
-    <script src="/static/js/siteEffects.js"></script>
+    <script src="/static/js/siteController.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="container">
         <div class="main-previewer">
             <div class="preview">
-                em
+                
             </div>
         </div>
         <div class="interface">
