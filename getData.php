@@ -11,6 +11,9 @@ $data_array = json_decode($json_data, JSON_OBJECT_AS_ARRAY); // array
 ECHO $data->name; // This time the json starts with just the object { } - non_array.json
 ECHO $data_array['name'];
 
+
+
+
 // Write JSON
 
 // Assoc Array
