@@ -26,29 +26,4 @@ class JsonDataContr {
     }
 }
 
-// function getData($dataName){
-//     $data =  json_decode(file_get_contents(__DIR__ . "/../output/" . $dataName));
-
-//     return $data;
-// }
-
-// function editData($data){
-//     // $data = $data;
-
-//     // Array
-
-//     $names_only = ["John", "Johnny"];
-
-//     // convert to json
-
-//     $encoded_data = json_encode($data, JSON_PRETTY_PRINT); // Flag: JSON Pretty Print makes it so that the json file is much easier to read for humans
-
-//     // Write data to file
-
-//     file_put_contents('data.json', $encoded_data); // if file does not exist it will be made else OVERWRITTEN
-
-// }
-
-
-
 ?>
