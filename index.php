@@ -31,23 +31,25 @@
             <div class="main-interface">
                 <div class="interface-forms">
                     <form action="" class="main-form">
-                        <div class="title">
+                        <div class="title input-form">
                             <label for="title">Add Title</label>
                             <input type="text" name="" id="title">
-                            <input type="submit" value="">
+                            <input type="button" value="Create Title" id="addTitle">
                         </div>
-                        <div class="description">
+                        <div class="description input-form">
                             <label for="description">Add Description</label>
                             <input type="text" name="" id="description">
-                            <input type="submit" value="">
+                            <input type="submit" value="Create Description">
                         </div>
-                        <div class="image">
+                        <div class="image input-form">
                             <label for="image">Add Image</label>
                             <input type="file" name="" id="image">
+                            <input type="submit" value="Add Image">
                         </div>
-                        <div class="links">
+                        <div class="links input-form">
                             <label for="links">Add Links</label>
                             <input type="text" name="" id="links">
+                            <input type="submit" value="Add Links">
                         </div>
                     </form>
                 </div>
