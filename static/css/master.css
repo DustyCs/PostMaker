@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+}
+
+/* Preview */
+
+.main-previewer{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview{
+    border: 10px solid black;
+    width: 80%;
+    height: 90%;
+}
+
+/* Interface */
+
+.interface{
+    width: 20%;
+    height: 95vh;
+    border: 1px red solid;
+}
+
+/* File */
+
+.file-interface{
+    height: 15%;
+    border: 3px solid black;
+    padding: 1rem;
+}
+
+.file-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;    
+}
+
+.file-input {
+    border: 1px solid black;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#select-file{
+    display: none;
+}
+
+#select-input{
+    padding: 1rem 3rem;
+    /* background-color: orange; */
+}
+
+/* Main */
+
+.main-interface{
+    display: flex;
+    flex-direction: column;
+}
+
+.interface-form .main-form{
+    display: flex;
+    flex-direction: column;
+}
