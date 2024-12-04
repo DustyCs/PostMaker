@@ -3,4 +3,6 @@ $(document).ready(function(){
         var file = this.files[0];
         console.log(file);
     })
+
+    $(".preview").load("../getData.php");
 });
