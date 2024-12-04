@@ -3,13 +3,13 @@
 require "../classes/jsonDataContr.php";
 
 $file = $_POST['filename'];
+$file_location = "/../output/";
+$dataContr = new JsonDataContr($file, $file_location);
+$dataContr->editData();
+$dataContr->renderData();
 
-$test = getData($file);
+// echo $dataContr->data[0];
 
-$dataContr = new JsonDataContr($file);
 
-echo $dataContr->data->John;
-
-echo $test->John;
 
 ?>
