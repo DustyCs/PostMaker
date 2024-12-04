@@ -1,28 +1,61 @@
 <?php
 
-// getting the url seems pointless now since i can't find a way without having to deal with security 
-
-// $file_name = $_POST["filename"];
-// $json_data = file_get_contents(  __DIR__ . "/static/test_data/" . $file_name . ".json");
-
-// $data = json_decode($json_data); // objects
-// $data_array = json_decode($json_data, JSON_OBJECT_AS_ARRAY); // array
+class JsonDataContr {
+    public $data;
+    private $filename;
+    private $data_url;
 
 
-// // ECHO $data[0]->name; // Because the json starts with an array [ ] and the objects are inside { } - test.json
-// ECHO $data->name; // This time the json starts with just the object { } - non_array.json
-// ECHO $data_array['name'];
+    function __construct($jsonName){
+        $this->setData($jsonName);
+    }
 
-// $str_json = file_get_contents('php://input');
+    private function setData($dataName){
+        $this->data_url = __DIR__ . "/../output/" . $dataName;
+        $this->data =  json_decode(file_get_contents($this->data_url));
+    }
 
+    private function editData($data){
+        $names_only = ["John", "Johnny"];
+
+        $encoded_data = json_encode($data, JSON_PRETTY_PRINT);
+    
+        // Write data to file
+    
+        file_put_contents('data.json', $encoded_data);
+    
+    }
+
+    private function renderData($data){
+        file_put_contents('data.json', $data);
+    }
+    
+
+
+}
 
 function getData($dataName){
-    $data =  file_get_contents(__DIR__ . "/../output/" . $dataName);
-    $data = json_decode($data);
+    $data =  json_decode(file_get_contents(__DIR__ . "/../output/" . $dataName));
 
     return $data;
 }
 
+function editData($data){
+    // $data = $data;
+
+    // Array
+
+    $names_only = ["John", "Johnny"];
+
+    // convert to json
+
+    $encoded_data = json_encode($data, JSON_PRETTY_PRINT); // Flag: JSON Pretty Print makes it so that the json file is much easier to read for humans
+
+    // Write data to file
+
+    file_put_contents('data.json', $encoded_data); // if file does not exist it will be made else OVERWRITTEN
+
+}
 
 
 
