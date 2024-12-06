@@ -1,10 +1,12 @@
 export const buttonFunction = {
     counter: 0,
-    titleRe: / h*http /g,
-    imgRe: / png | jpg | webp /g,
-    linkRe: / www | http | com /g,
+    titleRe: /h*http/g,
+    imgRe: /png|jpg|webp/g,
+    linkRe: /www|http|com/g,
 
     addTitle : function(value, jsonData, jsonController){
+        console.log(this.titleRe)
+        //console.log(/h*http/g.test('http'));
         console.log(value); //  $("#title").val()
         // Check
         console.log(this.titleRe.test("http"))
