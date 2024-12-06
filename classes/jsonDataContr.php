@@ -4,8 +4,10 @@ class JsonDataContr {
     public $data;
     private $data_url;
 
-    function __construct($jsonName, $jsonLocation){
-        $this->setData($jsonName, $jsonLocation);
+    function __construct($jsonName=null, $jsonLocation){
+        if($jsonName){
+            $this->setData($jsonName, $jsonLocation); // Does not make sense to set on construct...  CLEAN THIS
+        }
     }
 
     private function setData($dataName, $dataLocation){

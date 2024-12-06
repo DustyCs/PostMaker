@@ -3,6 +3,7 @@
 require "../classes/jsonDataContr.php";
 
 $type = $_POST['type'];
+$dataContr = new JsonDataContr($file, $file_location); 
 
 if ($type == "select"){
     $file = $_POST['filename'];
@@ -16,7 +17,9 @@ if ($type == "run"){
 
 }   
 
-
+if ($type == "save"){
+    
+}
 // $file_location = "/../output/";
 // $dataContr = new JsonDataContr($file, $file_location); // $file is only sent if type is select in case of run the json itself should be sent
 // $dataContr->editData();
