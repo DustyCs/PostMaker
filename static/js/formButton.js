@@ -1,13 +1,16 @@
-const buttonFunction = {
+export const buttonFunction = {
     counter: 0,
-    titleRe: / h* /g,
+    titleRe: / h*http /g,
     imgRe: / png | jpg | webp /g,
     linkRe: / www | http | com /g,
 
     addTitle : function(value, jsonData, jsonController){
         console.log(value); //  $("#title").val()
-        jsonController.addObject('title' + this.counter, value, jsonData);
+        // Check
         console.log(this.titleRe.test("http"))
+
+        // Append
+        jsonController.addObject('title' + this.counter, value, jsonData);
         this.counter++;
         console.log(jsonData)
     },
@@ -21,6 +24,11 @@ const buttonFunction = {
 
     addImage: function(value, jsonData, jsonController){
         console.log(value); 
+        // Convert
+
+        // Check
+
+        // Append
         jsonController.addObject('image' + this.counter, value, jsonData);
         this.counter++;
         console.log(jsonData);

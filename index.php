@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="/static/css/master.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="/static/js/jquery-3.7.1.min.js"></script>
-    <script src="/static/js/siteController.js"></script>
-    <script src="/static/js/formButton.js"></script>
+    <script type="module" src="/static/js/siteController.js"></script>
+    <!-- <script src="/static/js/formButton.js"></script>  --> 
+     <!-- ^ somehow managed to make it work by adding type module \_o_0_/ -->
     <title>Document</title>
 </head>
 <body>
@@ -55,7 +56,7 @@
                     </form>
                 </div>
                 <div class="file-backup">
-
+                    <button id="file-run">RUN</button>
                 </div>
             </div>
         </div>
