@@ -39,17 +39,17 @@
                         <div class="description input-form">
                             <label for="description">Add Description</label>
                             <input type="text" name="" id="description">
-                            <input type="submit" value="Create Description">
+                            <input type="button" value="Create Description" id="addDescription">
                         </div>
                         <div class="image input-form">
                             <label for="image">Add Image</label>
                             <input type="file" name="" id="image">
-                            <input type="submit" value="Add Image">
+                            <input type="button" value="Add Image" id="addImage">
                         </div>
                         <div class="links input-form">
                             <label for="links">Add Links</label>
-                            <input type="text" name="" id="links">
-                            <input type="submit" value="Add Links">
+                            <input type="text" name="" id="link">
+                            <input type="button" value="Add Links" id="addLink">
                         </div>
                     </form>
                 </div>

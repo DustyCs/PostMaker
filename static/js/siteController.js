@@ -23,6 +23,25 @@ $(document).ready(function(){
         console.log(jsonData);
     })
 
+    $("#addDescription").on('click', function(){
+        console.log($("#title").val());
+        jsonController.addDescription($("#title").val(), jsonData);
+        console.log(jsonData);
+    })
+
+    $("#addImage").on('click', function(){
+        console.log($("#title").val());
+        jsonController.addImage($("#title").val(), jsonData);
+        console.log(jsonData);
+    })
+
+    $("#addLink").on('click', function(){
+        console.log($("#title").val());
+        jsonController.addLink($("#link").val(), jsonData);
+        jsonController.addObject("link", $("#link").val(), jsonData) // Clean - Works
+        console.log(jsonData);
+    })
+
     // $(".preview").load("../includes/renderData.php");
 });
 
@@ -39,8 +58,12 @@ const jsonController = {
     addImage : function(data, json){
         !json.image ? json.image = data : json[image + '1'] = data;
     },
-    addLinks : function(data, json){
+    addLink : function(data, json){
         !json.link ? json.link = data : json[link + '1'] = data;
+    },
+    // Cleaner
+    addObject : function(key, data, json){
+        !json[key] ? json[key] = data : json[key + 1] = data;
     }
 
 }
