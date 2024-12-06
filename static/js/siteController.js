@@ -16,6 +16,9 @@ $(document).ready(function(){
     jsonData.title = "Something";
 
     $("#addTitle").on('click', () => { buttonFunction.addTitle($("#title").val(), jsonData, jsonController)});
+    $("#addDescription").on('click', () => { buttonFunction.addDescription($("#description").val(), jsonData, jsonController)});
+    $("#addImage").on('click', () => { buttonFunction.addImage($("#image").val(), jsonData, jsonController)});
+    $("#addLink").on('click', () => { buttonFunction.addLink($("#link").val(), jsonData, jsonController)});
 
     // R
     // $("#addTitle").on('click', function(){
@@ -24,23 +27,23 @@ $(document).ready(function(){
     //     console.log(jsonData);
     // })
 
-    $("#addDescription").on('click', function(){
-        console.log($("#description").val());
-        jsonController.addObject("description", $("#description").val(), jsonData)
-        console.log(jsonData);
-    })
+    // $("#addDescription").on('click', function(){
+    //     console.log($("#description").val());
+    //     jsonController.addObject("description", $("#description").val(), jsonData)
+    //     console.log(jsonData);
+    // })
 
-    $("#addImage").on('click', function(){
-        console.log($("#image").val());
-        jsonController.addObject("image", $("#image").val(), jsonData)
-        console.log(jsonData);
-    })
+    // $("#addImage").on('click', function(){
+    //     console.log($("#image").val());
+    //     jsonController.addObject("image", $("#image").val(), jsonData)
+    //     console.log(jsonData);
+    // })
 
-    $("#addLink").on('click', function(){
-        console.log($("#link").val());
-        jsonController.addObject("link", $("#link").val(), jsonData) // Clean - Works
-        console.log(jsonData);
-    })
+    // $("#addLink").on('click', function(){
+    //     console.log($("#link").val());
+    //     jsonController.addObject("link", $("#link").val(), jsonData) // Clean - Works
+    //     console.log(jsonData);
+    // })
 
     // $(".preview").load("../includes/renderData.php");
 });
