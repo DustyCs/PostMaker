@@ -3,7 +3,7 @@ $(document).ready(function(){
         var file = this.files[0];
         console.log(file.name);
 
-        // debug purpose
+        // DEBUG
         // W A R N I N G -> THIS COULD CREATE/OVERWRITE FILES IF UNCOMMENTED BE CAREFUL
         // $(".preview").load('../includes/jsonData.includes.php', {
         //     filename: file.name
@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 const jsonController = {
     addObject : function(key, data, json){
-        !json[key] ? json[key] = data : json[key + 1] = data;
+        !json[key] ? json[key] = data : json[key] = data;
     }
 
 }
