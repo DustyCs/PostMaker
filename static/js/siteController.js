@@ -19,25 +19,26 @@ $(document).ready(function(){
 
     $("#addTitle").on('click', function(){
         console.log($("#title").val());
-        jsonController.addTitle($("#title").val(), jsonData);
+        // jsonController.addTitle($("#title").val(), jsonData);
+        jsonController.addObject("title", $("#title").val(), jsonData)
         console.log(jsonData);
     })
 
     $("#addDescription").on('click', function(){
-        console.log($("#title").val());
-        jsonController.addDescription($("#title").val(), jsonData);
+        console.log($("#description").val());
+        // jsonController.addDescription($("#description").val(), jsonData);
+        jsonController.addObject("description", $("#description").val(), jsonData)
         console.log(jsonData);
     })
 
     $("#addImage").on('click', function(){
-        console.log($("#title").val());
-        jsonController.addImage($("#title").val(), jsonData);
+        console.log($("#image").val());
+        jsonController.addObject("image", $("#image").val(), jsonData)
         console.log(jsonData);
     })
 
     $("#addLink").on('click', function(){
-        console.log($("#title").val());
-        jsonController.addLink($("#link").val(), jsonData);
+        console.log($("#link").val());
         jsonController.addObject("link", $("#link").val(), jsonData) // Clean - Works
         console.log(jsonData);
     })
@@ -45,9 +46,7 @@ $(document).ready(function(){
     // $(".preview").load("../includes/renderData.php");
 });
 
-// STILL DRY 
-// NEED CLEANING
-// Need a way to increment the object key
+
 const jsonController = {
     addTitle : function(data, json){
         !json.title ? json.title = data : json["title" + 1] = data;
