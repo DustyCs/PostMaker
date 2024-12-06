@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="/static/js/jquery-3.7.1.min.js"></script>
     <script src="/static/js/siteController.js"></script>
+    <script src="/static/js/formButton.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -31,23 +32,25 @@
             <div class="main-interface">
                 <div class="interface-forms">
                     <form action="" class="main-form">
-                        <div class="title">
+                        <div class="title input-form">
                             <label for="title">Add Title</label>
                             <input type="text" name="" id="title">
-                            <input type="submit" value="">
+                            <input type="button" value="Create Title" id="addTitle">
                         </div>
-                        <div class="description">
+                        <div class="description input-form">
                             <label for="description">Add Description</label>
                             <input type="text" name="" id="description">
-                            <input type="submit" value="">
+                            <input type="button" value="Create Description" id="addDescription">
                         </div>
-                        <div class="image">
+                        <div class="image input-form">
                             <label for="image">Add Image</label>
                             <input type="file" name="" id="image">
+                            <input type="button" value="Add Image" id="addImage">
                         </div>
-                        <div class="links">
+                        <div class="links input-form">
                             <label for="links">Add Links</label>
-                            <input type="text" name="" id="links">
+                            <input type="text" name="" id="link">
+                            <input type="button" value="Add Links" id="addLink">
                         </div>
                     </form>
                 </div>
