@@ -3,7 +3,8 @@ import { buttonFunction} from "./formButton.js"
 $(document).ready(function(){
     var jsonData = new Object;
 
-    jsonData.title = "Something";
+    jsonData.id = {"value": "0"};
+    jsonData.parent = {"value": true};
 
     $("#addTitle").on('click', () => { buttonFunction.addTitle($("#title").val(), jsonData, jsonController)}); // jsonController -> CB func
     $("#addDescription").on('click', () => { buttonFunction.addDescription($("#description").val(), jsonData, jsonController)});
@@ -24,6 +25,8 @@ $(document).ready(function(){
 
     })
 
+    // unnessary why write this? 
+    
     $("#file-run").on('click', function(){
         $.ajax({
             type: "POST",
@@ -44,10 +47,22 @@ $(document).ready(function(){
     // $(".preview").load("../includes/renderData.php");
 });
 
+{
+    function createObject(name, prop1){
+        x = {"name": name,
+            "propery": prop1
+        }
+
+        return x
+    }
+
+
+}
+
 
 const jsonController = {
     addObject : function(key, data, json){
-        !json[key] ? json[key] = data : json[key] = data;
+        !json[key] ? json[key] = data : json[key] = data; // doesn't do shit since it can't see the counter \_o_0_/
     }
 
 }

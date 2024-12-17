@@ -11,6 +11,7 @@ if ($type == "select"){
 
     $dataContr->file = $file;
     $dataContr->file_location = $file_location;
+    $dataContr->setData($file, $file_location); # Test
 }
     
 if ($type == "run"){
@@ -37,10 +38,18 @@ if ($type == "backup"){
     
 }
 
+if ($type == "maintenance"){
+    $json = filter_input(INPUT_POST, 'json');
+    $decoded = json_decode($json);
+
+    ECHO var_dump($decoded) . var_dump($type);
+}
+
+// dont tohuch
 // $dataContr->editData();
 // $dataContr->renderData();
 
-// echo $dataContr->data[0];
+echo $dataContr->data[0];
 // ECHO var_dump($object);
 
 
