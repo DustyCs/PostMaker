@@ -6,10 +6,10 @@ $(document).ready(function(){
     jsonData.id = {"value": "0"};
     jsonData.parent = {"value": true};
 
-    $("#addTitle").on('click', () => { buttonFunction.addTitle($("#title").val(), jsonData, jsonController)}); // jsonController -> CB func
-    $("#addDescription").on('click', () => { buttonFunction.addDescription($("#description").val(), jsonData, jsonController)});
-    $("#addImage").on('click', () => { buttonFunction.addImage($("#image").val(), jsonData, jsonController)});
-    $("#addLink").on('click', () => { buttonFunction.addLink($("#link").val(), jsonData, jsonController)});
+    $("#addTitle").on('click', () => { buttonFunction.addTitle($("#title").val(), $("#title_parent").val(), jsonData, jsonController)}); // jsonController -> CB func
+    $("#addDescription").on('click', () => { buttonFunction.addDescription($("#description").val(), $("#title_parent").value, jsonData, jsonController)});
+    $("#addImage").on('click', () => { buttonFunction.addImage($("#image").val(), $("#title_parent").val(), jsonData, jsonController)});
+    $("#addLink").on('click', () => { buttonFunction.addLink($("#link").val(), $("#title_parent").val(), jsonData, jsonController)});
 
     $("#select-file").change(function(){
         var file = this.files[0];
@@ -25,8 +25,6 @@ $(document).ready(function(){
 
     })
 
-    // unnessary why write this? 
-    
     $("#file-run").on('click', function(){
         $.ajax({
             type: "POST",
@@ -46,19 +44,6 @@ $(document).ready(function(){
 
     // $(".preview").load("../includes/renderData.php");
 });
-
-{
-    function createObject(name, prop1){
-        x = {"name": name,
-            "propery": prop1
-        }
-
-        return x
-    }
-
-
-}
-
 
 const jsonController = {
     addObject : function(key, data, json){

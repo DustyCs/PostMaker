@@ -5,14 +5,18 @@ export const buttonFunction = {
     imgRe: /png|jpg|webp/g,
     linkRe: /www|http|com/g,
 
-    addTitle : function(value, jsonData, jsonController){
+    addTitle : function(value, parentClass, jsonData, jsonController){
         // console.log(this.titleRe)
         //console.log(/h*http/g.test('http'));
-        // console.log(value); //  $("#title").val()
+        // console.log(value, parentClass); //  $("#title").val()
         // Check
         // console.log(this.titleRe.test("http")) // regex
+        if(!parentClass){
+            parentClass = ".post-title"; // do the same thing with the other ones
+        }
 
-        var mainData = {"value": value, "type": "txt", "class":"", "parent_class": ".post-title"} // works
+
+        var mainData = {"value": value, "type": "txt", "class":"", "parent_class": parentClass}; // works
 
         var test = {"id": {"value": "0"},
 
@@ -41,7 +45,7 @@ export const buttonFunction = {
         console.log(jsonData)
     },
 
-    addDescription : function(value, jsonData, jsonController){
+    addDescription : function(value, parentClass, jsonData, jsonController){
         var mainData = {"value": value, "type": "txt", "class":"", "parent_class": ".post-title"}
         console.log(value);
         jsonController.addObject('description' + this.counter, mainData, jsonData);
@@ -49,7 +53,7 @@ export const buttonFunction = {
         console.log(jsonData);
     },
 
-    addImage: function(value, jsonData, jsonController){
+    addImage: function(value, parentClass, jsonData, jsonController){
         console.log(value); 
         // Convert
 
@@ -62,7 +66,7 @@ export const buttonFunction = {
         console.log(jsonData);
     },
 
-    addLink : function(value, jsonData, jsonController){
+    addLink : function(value, parentClass, jsonData, jsonController){
         console.log(value); 
         
         var mainData = {"value": value, "type": "txt", "class":"", "parent_class": ".post-title"} 

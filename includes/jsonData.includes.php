@@ -23,8 +23,8 @@ if ($type == "run"){
     $dataContr->data = $decoded; // No need to run setData since this is already the data
     $dataContr->editData();
     // Set Data URL BEFORE RUNNING RENDER DATA
-    $dataContr->data_url = __DIR__ . $save_location . $file_name . ".json";
-    $dataContr->renderData(); 
+    // $dataContr->data_url = __DIR__ . $save_location . $file_name . ".json";
+    // $dataContr->renderData();  
 
     ECHO var_dump($decoded) . var_dump($type);
 

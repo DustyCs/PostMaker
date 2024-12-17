@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/master.css">
+    <link rel="stylesheet" href="/static/css/input_styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="/static/js/jquery-3.7.1.min.js"></script>
     <script type="module" src="/static/js/siteController.js"></script>
@@ -34,21 +35,29 @@
                         <div class="title input-form">
                             <label for="title">Add Title</label>
                             <input type="text" name="" id="title">
+                            <label for="title">Parent Class</label>
+                            <input type="text" name="" id="title_parent" placeholder=".post-title">
                             <input type="button" value="Create Title" id="addTitle">
                         </div>
                         <div class="description input-form">
                             <label for="description">Add Description</label>
                             <input type="text" name="" id="description">
+                            <label for="title">Parent Class</label>
+                            <input type="text" name="" id="description_parent">
                             <input type="button" value="Create Description" id="addDescription">
                         </div>
                         <div class="image input-form">
                             <label for="image">Add Image</label>
                             <input type="file" name="" id="image">
+                            <label for="title">Parent Class</label>
+                            <input type="text" name="" id="image_parent">
                             <input type="button" value="Add Image" id="addImage">
                         </div>
                         <div class="links input-form">
                             <label for="links">Add Links</label>
                             <input type="text" name="" id="link">
+                            <label for="title">Parent Class</label>
+                            <input type="text" name="" id="link_parent">
                             <input type="button" value="Add Links" id="addLink">
                         </div>
                     </form>
