@@ -2,24 +2,31 @@
 
 class JsonDataContr {
     public $data;
-    private $data_url;
+    public $data_url;
+    public $file;
+    public $file_location;
 
-    function __construct($jsonName=null, $jsonLocation){
-        if($jsonName){
-            $this->setData($jsonName, $jsonLocation); // Does not make sense to set on construct...  CLEAN THIS
+    function __construct(){
+        if($this->file){ // won't run since file is false when constructed - R?
+            $this->setData($this->file, $this->file_location);
         }
     }
 
-    private function setData($dataName, $dataLocation){
+    public function setData($dataName, $dataLocation){
         $this->data_url = __DIR__ . $dataLocation . $dataName;
-        $this->data =  json_decode(file_get_contents($this->data_url));
+        
+        if (!$this->data){
+            $this->data =  json_decode(file_get_contents($this->data_url));
+        }
+    
     }
 
     public function editData(){
-        $this->data = array(
-            "name" => "John",
-            "surname" => "Doe"
-        );
+        // $this->data = array(
+        //     "name" => "John",
+        //     "surname" => "Doe"
+        // );
+
         $this->data = json_encode($this->data, JSON_PRETTY_PRINT);
     }
 

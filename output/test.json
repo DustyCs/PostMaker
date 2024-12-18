@@ -1,0 +1,26 @@
+{
+    "id": {
+        "value": "0"
+    },
+    "parent": {
+        "value": true
+    },
+    "title0": {
+        "value": "PostMaker Prototype",
+        "type": "txt",
+        "class": "",
+        "parent_class": ".post-title"
+    },
+    "description1": {
+        "value": "Has been succesfully made",
+        "type": "txt",
+        "class": "",
+        "parent_class": ".post-title"
+    },
+    "link2": {
+        "value": "No link",
+        "type": "txt",
+        "class": "",
+        "parent_class": ".post-title"
+    }
+}

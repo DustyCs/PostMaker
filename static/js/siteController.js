@@ -3,12 +3,13 @@ import { buttonFunction} from "./formButton.js"
 $(document).ready(function(){
     var jsonData = new Object;
 
-    jsonData.title = "Something";
+    jsonData.id = {"value": "0"};
+    jsonData.parent = {"value": true};
 
-    $("#addTitle").on('click', () => { buttonFunction.addTitle($("#title").val(), jsonData, jsonController)}); // jsonController -> CB func
-    $("#addDescription").on('click', () => { buttonFunction.addDescription($("#description").val(), jsonData, jsonController)});
-    $("#addImage").on('click', () => { buttonFunction.addImage($("#image").val(), jsonData, jsonController)});
-    $("#addLink").on('click', () => { buttonFunction.addLink($("#link").val(), jsonData, jsonController)});
+    $("#addTitle").on('click', () => { buttonFunction.addTitle($("#title").val(), $("#title_parent").val(), jsonData, jsonController)}); // jsonController -> CB func
+    $("#addDescription").on('click', () => { buttonFunction.addDescription($("#description").val(), $("#title_parent").value, jsonData, jsonController)});
+    $("#addImage").on('click', () => { buttonFunction.addImage($("#image").val(), $("#title_parent").val(), jsonData, jsonController)});
+    $("#addLink").on('click', () => { buttonFunction.addLink($("#link").val(), $("#title_parent").val(), jsonData, jsonController)});
 
     $("#select-file").change(function(){
         var file = this.files[0];
@@ -41,13 +42,14 @@ $(document).ready(function(){
         });
     })
 
+    
+
     // $(".preview").load("../includes/renderData.php");
 });
 
-
 const jsonController = {
     addObject : function(key, data, json){
-        !json[key] ? json[key] = data : json[key] = data;
+        !json[key] ? json[key] = data : json[key] = data; // doesn't do shit since it can't see the counter \_o_0_/
     }
 
 }
