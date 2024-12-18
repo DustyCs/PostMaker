@@ -19,3 +19,4 @@ JS
 First fix the image link though
 Add a way to make so the parent is editable and you can add the class so change the design + CSS
 
+Can use database to make edits before submitting

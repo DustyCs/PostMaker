@@ -42,6 +42,8 @@ $(document).ready(function(){
         });
     })
 
+    
+
     // $(".preview").load("../includes/renderData.php");
 });
 

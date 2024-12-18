@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/master.css">
-    <link rel="stylesheet" href="/static/css/input_styles.css">
+    <link rel="stylesheet" href="static/css/master.css">
+    <link rel="stylesheet" href="static/css/input_styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="/static/js/jquery-3.7.1.min.js"></script>
-    <script type="module" src="/static/js/siteController.js"></script>
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="static/js/siteController.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="description input-form">
                             <label for="description">Add Description</label>
-                            <input type="text" name="" id="description">
+                            <textarea name="" id="description"></textarea>
                             <label for="title">Parent Class</label>
                             <input type="text" name="" id="description_parent">
                             <input type="button" value="Create Description" id="addDescription">

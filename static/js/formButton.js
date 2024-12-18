@@ -16,23 +16,7 @@ export const buttonFunction = {
         }
 
 
-        var mainData = {"value": value, "type": "txt", "class":"", "parent_class": parentClass}; // works
-
-        var test = {"id": {"value": "0"},
-
-        "parent": {"value": true},
-
-        "description": {"value": "The blog site is here!!! 25/11/2024! I really didn't think that I'll be able to actually push through my lazyness and do something like this but here I am!",
-        
-        "type":"txt", "class":"", "parent_class": ".post-content"},
-
-        "image": {"value": "../data/images/blog-img/coming_soon.png", 
-        
-        "type":"img", "class":"blog-img", "parent_class": ".post-content"}, 
-
-        "links": {"value": "No Links", 
-        
-        "type":"txt", "class":"", "parent_class": ".post-content"}}
+        var mainData = {"value": value, "type": "txt", "class":"", "parent_class": parentClass}; // work
 
         // Edit
 

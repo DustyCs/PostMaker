@@ -1,3 +1,11 @@
 input[type="text"][value=".post-title"]{
     color: red;
 }
+
+#title{
+    height: 2rem;
+}
+
+#description{
+    height: 7rem;
+}
